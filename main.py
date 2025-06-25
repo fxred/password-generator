@@ -20,7 +20,6 @@ def gerador_de_senha(tamanho, minusculas, maiusculas, numeros, simbolos):
     caracteres_restantes = tamanho - ((tamanho // divisor)*divisor)
 
 
-
     if minusculas:
         arr_minusculas = []
         for i in range(0, (tamanho // divisor) + caracteres_restantes):
@@ -67,7 +66,6 @@ def gerador_de_senha(tamanho, minusculas, maiusculas, numeros, simbolos):
             indexes.pop(0)
     
 
-
     if caracteres_restantes > 0:
         for i in range(caracteres_restantes):
             senha[indexes[i]] = arr_minusculas.pop(0)
@@ -75,9 +73,5 @@ def gerador_de_senha(tamanho, minusculas, maiusculas, numeros, simbolos):
             indexes.pop(0)
     
 
-
     senha = ''.join(senha)
     return senha
-
-
-print(gerador_de_senha(10, True, True, True, True))
